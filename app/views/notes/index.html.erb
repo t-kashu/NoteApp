@@ -10,7 +10,18 @@
     <%# // ログインしているときは上記を表示する %>
     <div class="card__wrapper">
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
-      <%= render partial: 'note', collection: @notes %>
+      <p>
+        <% @notes.each do |note| %>
+          <li class="notes-container">
+            <%= link_to note_path(note.id) do %>
+              <div class="note">
+                <%= note.title %>
+                <%= sanitize(note.content) %>
+              </div>
+            <% end %>
+          </li>
+        <% end %>
+      </p>
     </div>
   </div>
 </main>

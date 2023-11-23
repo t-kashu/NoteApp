@@ -140,6 +140,10 @@ a {
   justify-content: center;
 }
 /* メイン */
+img {
+  max-width: 100px; /* 画像の幅を親要素に合わせる */
+  height: auto;    /* 高さは自動調整 */
+}
 
 .greeting{
   margin-bottom: 20px;
@@ -182,6 +186,16 @@ a {
   text-decoration: underline;
 }
 
+.notes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.note {
+  margin-bottom: 20px; /* 各ノートの下に余白を追加 */
+}
+
 /* 詳細ページ */
 .note__wrapper{
   min-height: calc(100vh - 161px);
@@ -191,10 +205,12 @@ a {
   font-weight: bold;
   text-align: center;
 }
+
 .note__content{
   font-size: 24px;
   text-align: center;
 }
+
 .note__user{
   display: block;
   font-size: 16px;
@@ -237,12 +253,6 @@ a {
 .note__btn:hover{
   color: #fff;
   background: #999;
-}
-
-.note__comments{
-  background-color: #f6f6f6;
-  padding: 20px;
-  margin: 28px 0 40px 0;
 }
 
 /* ユーザーページ */

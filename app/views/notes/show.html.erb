@@ -1,12 +1,12 @@
 <main class="main">
   <div class="inner">
     <div class="note__wrapper">
-      <p class="note__hedding">
+      <div class="note__hedding">
         <%= @note.title %>
-      </p>
-      <p class="note__content">
-        <%= @note.content %>
-      </p>
+      </div>
+      <div class="note__content">
+        <%= sanitize(@note.content) %>
+      </div>
       <div class="note__image">
         <% if @note.image.attached? %>
           <%= image_tag @note.image, class: 'note-image' %>
