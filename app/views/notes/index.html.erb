@@ -1,8 +1,16 @@
-<h1>Notes</h1>
-
-<%= link_to 'New Note', new_note_path %>
-
-<% @notes.each do |note| %>
-  <h2><%= link_to note.title, note_path(note) %></h2>
-  <div><%= note.content.html_safe %></div>
-<% end %>
+<main class="main">
+  <div class="inner">
+    <%# ログインしているときは以下を表示する %>
+    <% if user_signed_in? %>
+      <div class="greeting">
+        <%= "こんにちは、" %>
+        <%= link_to "#{current_user.name}さん", "/users/#{current_user.id}", class: :greeting__link %>
+      </div>
+    <% end %>
+    <%# // ログインしているときは上記を表示する %>
+    <div class="card__wrapper">
+      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+      <%= render partial: 'note', collection: @notes %>
+    </div>
+  </div>
+</main>

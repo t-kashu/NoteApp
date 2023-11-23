@@ -8,9 +8,37 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
 
   <body>
+    <header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
+            <%= link_to "NoteApp", root_path %>
+          </div>
+          <%# ログインしているときは以下を表示するようにしましょう %>
+          <% if user_signed_in? %>
+            <div class="nav__right">
+              <%= link_to "ログアウト", "/users/sign_out", data: { turbo_method: :delete } %>
+              <%= link_to 'New Note', "/notes/new", class: "GET" %>
+            </div>
+          <%# // ログインしているときは上記を表示するようにしましょう %>
+          <% else %>
+          <%# ログインしていないときは以下を表示するようにしましょう %>
+            <div class="nav__right">
+              <%= link_to "ログイン", "/users/sign_in", class: "GET" %>
+              <%= link_to "新規登録",  "/users/sign_up", class: "GET" %>
+            </div>
+          <%# // ログインしていないときは上記を表示するようにしましょう %>
+          <% end %>
+        </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer class="footer">
+      <p class="copyright">Copyright © NoteApp All rights reserved.</p>
+    </footer>
   </body>
 </html>

@@ -1,5 +1,26 @@
-<h1><%= @note.title %></h1>
-<div><%= @note.content.html_safe %></div>
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+<main class="main">
+  <div class="inner">
+    <div class="note__wrapper">
+      <p class="note__hedding">
+        <%= @note.title %>
+      </p>
+      <p class="note__content">
+        <%= @note.content %>
+      </p>
+      <div class="note__image">
+        <% if @note.image.attached? %>
+          <%= image_tag @note.image, class: 'note-image' %>
+        <% end %>
+      </div>
+      <%= link_to "by #{@note.user.name}", user_path(@note.user), class: :note__user %>
+      <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
+      <% if user_signed_in? && current_user.id == @note.user_id %>
+        <div class="note__manage">
+          <%= link_to "編集する", edit_note_path(@note), class: :note__btn %>
+          <%= link_to "削除する", note_path(@note.id), data: { turbo_method: :delete }, class: :note__btn %>
+        </div>
+      <% end %>
+      <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
+    </div>
+  </div>
+</main>
