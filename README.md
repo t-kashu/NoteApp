@@ -1,24 +1,14 @@
-# README
+# アプリケーション名  
+NoteApp  
+  
+# アプリケーションの概要  
+個人的な学習用としてメモ内のテキストに過去にメモしたリンクを挿入できれば遡ることも容易になると考え、開発しました。(随時改良中)  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# URL  
+https://noteapp-cwt1.onrender.com/  
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# テスト用アカウント
+・Basic認証ID:admin
+・Basic認証パスワード:123456
+・メールアドレス:test@test.com
+・パスワード:123456
