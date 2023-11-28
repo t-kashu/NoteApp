@@ -8,7 +8,7 @@ NoteApp
 https://noteapp-cwt1.onrender.com/  
 
 # テスト用アカウント
-・Basic認証ID:admin
-・Basic認証パスワード:123456
-・メールアドレス:test@test.com
-・パスワード:123456
+・Basic認証ID:admin  
+・Basic認証パスワード:123456  
+・メールアドレス:test@test.com  
+・パスワード:123456 
