@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
    has_many :notes, dependent: :destroy
 
-   validates :name, presence: true
-   validates :password, format: { with:  /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
+   validates :name,          presence: true
+   validates :email,         presence: true
+   validates :password,      presence: true, format: { with:  /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
 end
