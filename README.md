@@ -19,5 +19,19 @@ https://noteapp-cwt1.onrender.com/
 
 # アプリケーションを作成した背景  
 プログラミングの勉強において、当初はノートに書くという手法を取っていたが  
-ノートだと特定の用語から遡り調べる事が難しく、リンク機能のある  
+ノートだと特定の用語から遡って調べる事が難しく、リンク機能のある  
 アプリケーションがあれば手軽に遡れると思い、開発することにした。  
+
+# 洗い出した要件  
+[要件を定義したシート](https://docs.google.com/spreadsheets/d/1_N5eJlva_yzNrW31xi83g0i3pMmlwbFAGDtB0uYQC_U/edit#gid=982722306)  
+
+# 実装予定の機能  
+カテゴリーを自分で設定し、タグ付けできるようにする。  
+カテゴリー検索を行えるようにする。  
+
+# データベース設計  
+[![Image from Gyazo](https://i.gyazo.com/8bca3588d076fa7972eb312a1e90fae0.png)](https://gyazo.com/8bca3588d076fa7972eb312a1e90fae0) 
+
+# 画面遷移図  
+[![Image from Gyazo](https://i.gyazo.com/1650103162b67ca12a7dbec34e7ac4dd.png)](https://gyazo.com/1650103162b67ca12a7dbec34e7ac4dd) 
+
