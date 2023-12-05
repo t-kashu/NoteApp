@@ -35,3 +35,8 @@ https://noteapp-cwt1.onrender.com/
 # 画面遷移図  
 [![Image from Gyazo](https://i.gyazo.com/1650103162b67ca12a7dbec34e7ac4dd.png)](https://gyazo.com/1650103162b67ca12a7dbec34e7ac4dd) 
 
+# 開発環境  
+フロントエンド  
+バックエンド  
+テスト  
+タスク管理  
