@@ -16,7 +16,7 @@
             <%= link_to note_path(note.id) do %>
               <div class="note">
                 <%= note.title %>
-                <%= sanitize(note.content) %>
+                <%= note.content %>
               </div>
             <% end %>
           </li>

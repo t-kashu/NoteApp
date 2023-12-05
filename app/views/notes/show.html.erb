@@ -5,7 +5,7 @@
         <%= @note.title %>
       </div>
       <div class="note__content">
-        <%= sanitize(@note.content) %>
+        <%= @note.content %>
       </div>
       <div class="note__image">
         <% if @note.image.attached? %>
