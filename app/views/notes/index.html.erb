@@ -5,23 +5,30 @@
       <div class="greeting">
         <%= "こんにちは、" %>
         <%= link_to "#{current_user.name}さん", "/users/#{current_user.id}", class: :greeting__link %>
+    <% else %>
+      <%= "ログインするとノートが表示されます" %><br>
+      <%= "未登録の方は新規登録してください" %>
       </div>
     <% end %>
     <%# // ログインしているときは上記を表示する %>
-    <div class="card__wrapper">
-      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
-      <p>
-        <% @notes.each do |note| %>
-          <li class="notes-container">
-            <%= link_to note_path(note.id) do %>
-              <div class="note">
-                <%= note.title %>
-                <%= note.content %>
-              </div>
+    <% if @notes.present? %>
+      <div class="card__wrapper">
+        <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+        <p>
+          <% @notes.each do |note| %>
+            <% if user_signed_in? && current_user.id == note.user_id %>
+              <li class="notes-container">
+                <%= link_to note_path(note.id) do %>
+                  <div class="note">
+                    <%= note.title %>
+                    <%= note.content %>
+                  </div>
+                <% end %>
+              </li>
             <% end %>
-          </li>
-        <% end %>
-      </p>
-    </div>
+          <% end %>
+        </p>
+      </div>
+    <% end %>
   </div>
 </main>

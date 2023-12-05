@@ -36,7 +36,9 @@ https://noteapp-cwt1.onrender.com/
 [![Image from Gyazo](https://i.gyazo.com/1650103162b67ca12a7dbec34e7ac4dd.png)](https://gyazo.com/1650103162b67ca12a7dbec34e7ac4dd) 
 
 # 開発環境  
-フロントエンド  
-バックエンド  
-テスト  
-タスク管理  
+HTML/SCC  
+Ruby(Ruby on Rails)  
+MySQL 
+RSpec  
+
+#
