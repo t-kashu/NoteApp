@@ -6,8 +6,11 @@
         <%= "こんにちは、" %>
         <%= link_to "#{current_user.name}さん", "/users/#{current_user.id}", class: :greeting__link %>
     <% else %>
-      <%= "ログインするとご自身のノートが表示されます" %><br>
-      <%= "未登録の方は新規登録してください" %>
+      <%= link_to "ログイン", "/users/sign_in", class: "GET" %>
+      <%= "するとご自身のノートが表示されます" %><br>
+      <%= "未登録の方は" %>
+      <%= link_to "新規登録",  "/users/sign_up", class: "GET" %>
+      <%= "新規登録してください" %>
       </div>
     <% end %>
     <%# // ログインしているときは上記を表示する %>
