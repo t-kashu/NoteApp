@@ -106,7 +106,7 @@ a {
 .trix-content {
   min-height: 200px; /* 任意の高さに調整 */
   max-height: 400px; /* 必要に応じて最大高さを指定 */
-  overflow-y: auto;
+  overflow-y: visible;
 }
 
 .actions{
