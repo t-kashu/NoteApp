@@ -54,6 +54,7 @@ a {
 
 .nav__left a {
   color: blue; /* 任意の色を指定 */
+  font-size: 20px;
 }
 
 .nav__btn{
